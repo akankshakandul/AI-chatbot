@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Chatbot</title>
+<style>
+body {font-family:Arial; text-align: center;}
+.chatbox{width:300px; margin:auto;}
+input{width:70%; padding:5px;}
+button{padding:5px;}
+.response{margin-top:10px; color:green;}
+</style>
+</head>
+<body>
+<h2>🤖 AI Chatbot</h2>
+<div class="chatbox">
+<form method="POST">
+	<input type="text" name="message" placeholder="Type message..." required>
+	<button type="submit">Send</button>
+</form>
+{% if response %}
+<div class="response">Bot:{{response | safe}}</div>
+{% endif %}
+</div>
+</body>
+</html>
